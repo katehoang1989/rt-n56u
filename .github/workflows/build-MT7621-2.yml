@@ -4,10 +4,10 @@ on:
   release:
     types: [published]
   push:
-#    tags:
-#    - 'v*'
-  #  branches: 
-  #    - master
+    tags:
+    - 'v*'
+    branches: 
+      - master
   schedule:
     - cron: 0 17 * * 4
   watch:
@@ -95,7 +95,7 @@ jobs:
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v1-release
       with:
-        repo_token: ${{ secrets.R_TOKEN }}
+        repo_token: b0ab3646478a9d3ab849aedd24eaeaf45a565154
         file: /opt/images/*.trx
         tag: AtuoBuild
         overwrite: true
@@ -106,4 +106,4 @@ jobs:
        tag: AtuoBuild
        allowUpdates: true
        name: Padavan-firmware
-       token: ${{ secrets.R_TOKEN }}
+       token: b0ab3646478a9d3ab849aedd24eaeaf45a565154
