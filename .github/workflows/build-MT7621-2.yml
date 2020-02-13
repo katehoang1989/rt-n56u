@@ -1,4 +1,4 @@
-name: Build NEWIFI3
+name: Build MT7621-2
 
 on: 
   release:
